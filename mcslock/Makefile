@@ -1,5 +1,5 @@
 all:
-	gcc -o tests -std=gnu11 -Wall -O2 mcslock.c tests.c
+	gcc -o test -std=gnu11 -Wall -O2 mcslock.c test.c
 
 clean:
-	rm -f tests
+	rm -f test
