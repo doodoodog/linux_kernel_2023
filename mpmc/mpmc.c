@@ -198,7 +198,7 @@ void mpmc_enqueue(mpmc_t *q, handle_t *th, void *v)
     /* else the counterpart pop thread has wait this cell, so we just change the
      * waiting value and wake it
      */
-    *((int *) cv) = ZAAA;       // Mask - ZAAA => 0
+    *((int *) cv) = 0;       // Mask - ZAAA => 0
     mpmc_futex_wake(cv, 1);
 }
 
